@@ -17,14 +17,34 @@ def selection_sort(arr):
 
 selection_sort([1, 5, 3, 2, 4, 2, 6, 8, 7])
 
-
+print([12, 5, 3, 2, 4, 2, 6, 8, 7])
 # TO-DO:  implement the Bubble Sort function below
-def bubble_sort(arr):
 
+
+def bubble_sort(arr):
+    # loop through array
+    for i in range(0, len(arr) - 1):
+        # assign i to current index
+        cur_index = i
+        # Loop through rest of array
+        for j in range(0, len(arr) - 1):
+                # Compare i to next in line through array
+            print(f"{arr[j]}: {arr[j+1]}")
+            if arr[j+1] < arr[j]:
+                # if larger, switch places
+                print(f"Moving {arr[j]} to the right of {arr[j+1]}")
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+                print(arr)
+    # return array
+    print(arr)
     return arr
 
 
+bubble_sort([12, 5, 3, 2, 4, 2, 6, 8, 7])
+
 # STRETCH: implement the Count Sort function below
+
+
 def count_sort(arr, maximum=-1):
 
     return arr
