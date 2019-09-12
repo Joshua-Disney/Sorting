@@ -17,30 +17,33 @@ def selection_sort(arr):
 
 selection_sort([1, 5, 3, 2, 4, 2, 6, 8, 7])
 
-print([12, 5, 3, 2, 4, 2, 6, 8, 7])
+print([12, 5, 3, 4, 2, 6, 7, 8])
 # TO-DO:  implement the Bubble Sort function below
 
 
 def bubble_sort(arr):
     # loop through array
-    for i in range(0, len(arr) - 1):
-        # assign i to current index
-        cur_index = i
+    # Figure out how to make this into a while.
+    has_looped = True
+    while has_looped:
         # Loop through rest of array
-        for j in range(0, len(arr) - 1):
-                # Compare i to next in line through array
-            print(f"{arr[j]}: {arr[j+1]}")
-            if arr[j+1] < arr[j]:
+        has_looped = False
+        print("Has looped: False 31")
+        for i in range(0, len(arr) - 1):
+            # Compare i to next in line through array
+            print(f"{arr[i]}: {arr[i+1]}")
+            if arr[i+1] < arr[i]:
                 # if larger, switch places
-                print(f"Moving {arr[j]} to the right of {arr[j+1]}")
-                arr[j], arr[j+1] = arr[j+1], arr[j]
-                print(arr)
+                print(f"Moving {arr[i]} to the right of {arr[i+1]}")
+                arr[i], arr[i+1] = arr[i+1], arr[i]
+                has_looped = True
+                print(f"{arr}, Has looped: True")
     # return array
     print(arr)
     return arr
 
 
-bubble_sort([12, 5, 3, 2, 4, 2, 6, 8, 7])
+bubble_sort([12, 5, 3, 4, 2, 6, 7, 8])
 
 # STRETCH: implement the Count Sort function below
 
